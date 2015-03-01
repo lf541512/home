@@ -158,14 +158,14 @@
 				if(it.items){
 					attr(ico, 'src', ops.url + ops.folder);
 					addE(dt, 'click', (function(it, dd){
-						return function(e){
-							if(!$D('dl', dd).length){
-								self.createList(it.items, dd);
-							}
-							self.toggle(prevEl(dd));
-							ops.folderClick.call(it, e);
-							preventDefault(e);
-						}
+                            return function(e){
+                                if(!$D('dl', dd).length){
+                                    self.createList(it.items, dd);
+                                }
+                                self.toggle(prevEl(dd));
+                                ops.folderClick.call(it, e);
+                                preventDefault(e);
+                            }
 					})(it, dd));
 				}
 				else{
@@ -176,7 +176,7 @@
 						return function(e){ ops.itemClick.call(it, e);}
 					})(it));
 				}
-				//添加hover状态
+
 				addE(dt, 'click', function(dt){
 					if(self.prevDt){
 						self.prevDt.className = '';

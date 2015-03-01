@@ -2,8 +2,8 @@ var dsUrls = [
 	{
 		text:'图片切换',
 		items:[
-			{text:'百叶窗效果', url:'louver/'},
-			{text:'水平堆叠切换', url:'stack_slider/'},
+			{text:'百叶窗效果', url:'javascripts/lib/blind/blind.html'},
+			{text:'水平堆叠切换', items:[{text:'水平堆叠切换',url:'javascripts/lib/stack_slider/index.html'}]},
 			{text:'卡片效果', url:'Slider/'},
 			{text:'渐隐效果', url:'FadeList/'}
 		]

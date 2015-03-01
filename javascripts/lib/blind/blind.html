@@ -1,0 +1,37 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+        "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>百叶窗</title>
+    <script type="text/javascript" src="../ds.js"></script>
+    <script type="text/javascript" src="blind.js"></script>
+    <style type="text/css">
+        *{ padding:0; margin:0;}
+        #blind{ border:1px solid #333; height:319px; width:518px; margin:30px; overflow:hidden;}
+        .blind{ position:relative; overflow:hidden;}
+        .blind .page_bar{ position:absolute; bottom:10px; right:10px;}
+        .blind .page_bar a{ background:#333; border:1px solid #666; color:#fff; font:12px/16px Arial; float:left; margin:2px; width:16px; text-align:center; text-decoration:none; display:inline;}
+        .blind .page_bar a.hover,.blind .page_bar a:hover{ background:red; border-color:#FF9966 #660000 #660000 #FF9966;}
+        .blind .masks{ position:absolute; left:0; top:0; height:110%; width:110%; overflow:hidden;}
+        .blind .mask_panel{ float:left; position:relative;}
+        .blind .mask,.blind .links{ position:absolute; left:0; top:0; height:100%; width:100%;}
+        .blind .links a{ display:none; height:100%; width:100%;}
+        .blind .links a.hover{ display:block;}
+    </style>
+    <script type="text/javascript" >
+        window.onload=function(){
+            new Blind({shell:'blind'})
+        }
+    </script>
+</head>
+<body>
+<div id="blind">
+    <a href="#"><img alt="" src="images/b1.jpg" /></a>
+    <a href="#"><img alt="" src="images/b2.jpg" /></a>
+    <a href="#"><img alt="" src="images/b3.jpg" /></a>
+    <a href="#"><img alt="" src="images/b4.jpg" /></a>
+</div>
+
+</body>
+</html>

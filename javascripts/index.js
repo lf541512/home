@@ -4,6 +4,11 @@ $(function(){
         var containerObj=document.getElementById('container')
         var containerOffsetTop=containerObj.offsetTop;
         containerObj.style.height= ws.h-containerOffsetTop +'px';
+        containerObj.style.width=ws.w+'px';
+        var mainObj=ds.$id('main');
+        var listObj=ds.$id('list')
+        ds.css(mainObj,'width',ws.w-listObj.offsetWidth-4+'px');
+       // ds.css(mainObj,'width',1150+'px');
 
     }
     containerFit();
@@ -14,7 +19,7 @@ $(function(){
         //--不完整参数
         caption : '作品目录',
         url : 'javascripts/lib/tree/images/',
-        itemIco : 'ie.gif',
+        itemIco : 'item.gif',
         items : dsUrls,
         shell : 'list',
         itemClick : function(e){
