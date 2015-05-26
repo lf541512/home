@@ -1,0 +1,124 @@
+body{margin: 0;
+padding: 0;}
+.container{background: url(images/bgnoise_lg.png) ;}
+.clr{clear: both;}
+.right{
+	float: right;
+	
+}
+.freshdesignweb-top a{
+	display: block;
+	text-decoration: none;
+	padding: 2px 8px;
+	float: left;
+	color: #333;
+	text-shadow:1px 1px 1px #fff;
+	text-transform: uppercase;
+}
+.freshdesignweb-top a:hover{
+	background-color: #fff;
+}
+.freshdesignweb-top{
+	border-bottom: 1px solid #CCC;
+	padding-bottom: 5px;
+	background-color: rgba(200,200,200,0.2);
+}
+header>h1 span{
+	font-family: 'Alegreya SC', Georgia, serif;
+	display: block;
+	font-size: 20px;
+	color: #719dab;
+	font-style: italic;
+	font-weight: 400;
+	text-shadow:1px 1px 1px #CCC;
+}
+header{
+	text-align: center;
+}
+header h1{
+	color: #498ea5;
+	font-weight: bold;
+	font-size: 30px;
+	text-shadow:0 1px 1px #498ea5;
+}
+ul{padding: 0;margin: 0;list-style: none;}
+#fdw-pricing-table{
+	padding: 30px 0;
+	margin: 0 auto;
+	width: 928px;
+
+}
+.plan{
+	float: left;
+	width: 180px;
+	padding: 20px;
+	margin:  0 5px;
+	border: 1px solid #ddd;
+	background-color: #fff;
+	text-align: center;
+	text-shadow: 1px 1px 1px #000;
+	font-weight: 800;
+	color: #333;
+	font: 13px 'Lucida Sans', 'trebuchet MS', Arial, Helvetica;
+
+}
+.plan .header{
+	font-size: 20px;
+	text-transform: uppercase;
+	padding: 40px;
+	background-image: linear-gradient(#fff,#eee);
+	margin: -20px -20px 20px -20px;
+	border-bottom: 8px solid;
+	border-bottom-color: #B3E03F;
+	text-shadow:1px 1px 1px #000;
+	position: relative;
+	
+}
+.plan .header:after{
+	width: 100%;
+	content: " ";
+	display: block;
+	height: 3px;
+	position: absolute;
+	bottom: -8px;
+	left: 0;
+	background: url(images/bar.png);
+
+}
+.plan .price{
+	font-size: 45px;
+	
+}
+.plan .monthly{
+	padding-bottom: 20px;
+	text-transform: uppercase;
+	color: #999;
+	text-shadow:none;
+    
+}
+.plan li{
+	margin: 20px 0;
+	text-shadow:none;
+
+}
+.plan .signup{
+	text-decoration: none;
+	background-color: #72ce3f;
+	padding: 10px 20px;
+    border-radius: 3px;
+    color: #fff;
+    text-shadow: 0 -1px 0 rgba(0,0,0); 
+    /*display: block;*/
+    text-transform: uppercase;
+}
+.popular-plan{
+	padding: 40px 20px;
+	margin-top: -20px;	
+}
+.popular-plan .header{
+ border-bottom-color: #45D0DA;
+}
+.popular-plan .signup{
+	background-color: #45D0DA; 
+}
+

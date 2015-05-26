@@ -1,0 +1,83 @@
+.floor .slider {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 439px;
+    height: 236px;
+    overflow: hidden;
+    border-right: 1px solid #EDEDED;
+    border-bottom: 1px solid #EDEDED;
+}
+#clothes .slider {
+    top: 158px;
+    height: 315px;
+}
+.floor .slider .slider-nav {
+
+    height: 0;
+    line-height: 0;
+    text-align: center;
+    bottom: 19px;
+    cursor: default;
+}
+.slider-nav {
+    position: absolute;
+    height: 9px;
+    bottom: 10px;
+}
+.floor .slider .slider-nav li {
+    display: inline-block;
+}
+.floor .slider .slider-item {
+    border: none;
+}
+.slider-nav li {
+    display: inline-block;
+    width: 9px;
+    height: 9px;
+    margin: 0 2px;
+    background: #3e3e3e;
+    border-radius: 50%;
+    text-align: center;
+    color: #fff;
+    overflow: hidden;
+    cursor: pointer;
+}
+.slider-nav .slider-selected {
+    background: #b61b1f;
+    color: #fff;
+}
+.floor .slider .slider-page a {
+    border: none;
+}
+.slider-page a {
+    position: absolute;
+    top: 50%;
+    margin-top: -31px;
+    z-index: 1;
+    display: block;
+    width: 28px;
+    height: 62px;
+    line-height: 62px;
+    background: #808080;
+    background: rgba(0,0,0,0.2);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#32000000,endColorstr=#32000000);
+    color: #fff;
+    text-align: center;
+    font-size: 22px;
+    font-weight: normal;
+    font-family: "simsun";
+    text-decoration: none;
+}
+.slider-prev {
+    left: 0;
+}
+.slider-next{
+    right: 0;
+}
+.slider .slider-page{
+    display: none;
+}
+.slider:hover .slider-page{
+    display: block;
+}

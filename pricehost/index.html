@@ -1,0 +1,125 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+	<title>Demo CSS Table Price Hosting Plan</title>
+	<link rel="stylesheet" href="styles.css" />
+
+</head>
+<body>
+	<div class="container">
+			<!-- freshdesignweb top bar -->
+            <div class="freshdesignweb-top">
+                <a href="http://www.freshdesignweb.com" target="_blank">Home</a>
+                <span class="right">
+                    <a href="http://www.freshdesignweb.com/free-beautiful-css3-table-style.html">
+                        <strong>Back to the freshdesignweb Article</strong>
+                    </a>
+                </span>
+                <div class="clr"></div>
+            </div><!--/ freshdesignweb top bar -->
+			<header>
+				<h1><span>Tutorials</span>Demo CSS Table Price Hosting Plan</h1>
+            </header>       
+    
+	<div>
+<div id="fdw-pricing-table">
+    <div class="plan plan1">
+        <div class="header">Enterprise</div>
+        <div class="price">$59</div>  
+        <div class="monthly">per month</div>      
+        <ul>
+            <li><b>10GB</b> Disk Space</li>
+            <li><b>100GB</b> Monthly Bandwidth</li>
+            <li><b>20</b> Email Accounts</li>
+			<li><b>Unlimited</b> subdomains</li>			
+        </ul>
+        <a class="signup" href="#">Sign up</a>         
+    </div>
+    <div class="plan plan2">
+        <div class="header">Professional</div>
+        <div class="price">$29</div>
+        <div class="monthly">per month</div>  
+        <ul>
+            <li><b>5GB</b> Disk Space</li>
+            <li><b>50GB</b> Monthly Bandwidth</li>
+            <li><b>10</b> Email Accounts</li>
+			<li><b>Unlimited</b> subdomains</li>			
+        </ul>
+        <a class="signup" href="#">Sign up</a>            
+    </div>
+    <div class="plan plan3">
+        <div class="header">Standard</div>
+        <div class="price">$19</div>
+        <div class="monthly">per month</div>
+        <ul>
+            <li><b>3GB</b> Disk Space</li>
+            <li><b>25GB</b> Monthly Bandwidth</li>
+            <li><b>5</b> Email Accounts</li>
+			<li><b>Unlimited</b> subdomains</li>			
+        </ul>
+        <a class="signup" href="#">Sign up</a>        
+    </div>
+    <div class="plan plan4">
+        <div class="header">Basic</div>
+        <div class="price">$9</div>
+        <div class="monthly">per month</div>
+        <ul>
+            <li><b>1GB</b> Disk Space</li>
+            <li><b>10GB</b> Monthly Bandwidth</li>
+            <li><b>2</b> Email Accounts</li>
+			<li><b>Unlimited</b> subdomains</li>			
+        </ul>
+        <a class="signup" href="#">Sign up</a>        
+    </div> 
+    <div class="clr"></div>	
+</div>
+	</div>
+    
+</div>
+
+<script type="text/javascript">
+    _E={
+        BindEvent:function(obj,fun){
+            if(arguments.length==1){
+                fun=obj;
+                obj=null;
+            }
+            return function (event){
+                fun.call(obj,event);
+            }
+        }
+    }
+	window.onload=function  () {
+
+		var objs=document.querySelectorAll('.plan');
+		for (var i = objs.length - 1; i >= 0; i--) {
+            if(objs[i].addEventListener) {
+                objs[i].addEventListener('mouseenter',planEnter,false);
+                objs[i].addEventListener('mouseleave',planLeave,false);
+            }  else{
+                objs[i].attachEvent('onmouseenter',_E.BindEvent(objs[i],planEnter));
+                objs[i].attachEvent('onmouseleave',_E.BindEvent(objs[i],planLeave));
+            }
+
+		}
+        function planLeave(event){
+            var classNames=" "+this.className+" ";
+            while (classNames.indexOf(' '+'popular-plan'+' ')>-1) {
+                classNames= classNames.replace(' '+'popular-plan'+' ',' ');
+            }
+            classNames=classNames.replace(/^[\s]+|[\s]+$/g,'');
+            this.className=classNames;
+
+        }
+        function planEnter(event){
+            var classNames=this.className;
+            if (classNames.indexOf("popular-plan")==-1){
+                this.className+=" popular-plan";
+            }
+        }
+	}
+
+</script>
+</body>
+</html>

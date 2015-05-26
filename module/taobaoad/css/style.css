@@ -1,0 +1,93 @@
+.tabbao-wrap{
+    position: relative;
+    overflow: hidden;
+    width: 236px;
+    height: 349px;
+    border: 2px solid rgb(177, 0, 0);
+    background: #fff;
+}
+#detail{
+    width: 236px;
+    height: 255px;
+    position: relative;
+    overflow: hidden;
+    font-size: 14px;
+}
+#trigger{
+    width: 236px;
+    margin: 10px 0;
+    height: 80px;
+    position: relative;
+}
+ .site-logo{
+    display: block;
+    width: 236px;
+    height: 21px;
+    margin-bottom: 2px;
+    background: url("../images/taobao-logo.png") 0 -21px no-repeat;
+}
+ .tm .site-logo{
+    background-position:  0 -21px;
+}
+ .price{
+    font-weight: normal;
+    font-family: "Microsoft YaHei";
+    position: absolute;
+     bottom: -5px;
+    left: 0;
+    width: 236px;
+    height: 40px;
+    background: rgba(255,255,255,0.8);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#ccffffff,endColorstr=#ccffffff);
+    zoom: 1;
+}
+ .price a{
+    line-height: 35px;
+    font-weight: bold;
+    text-decoration: none;
+     margin-left: 4px;
+}
+.tm .now{
+    color: #b10000;
+}
+.before{
+    margin-left: 14px;
+}
+.tm .before{
+     color: #999;
+    font-weight: normal;
+    text-decoration: line-through;
+}
+.trigger-item{
+    float: left;
+    width: 35px;
+    height: 35px;
+    margin: 2px;
+    position: relative;
+}
+a.trigger-item:hover img ,.trigger-item.selected img{
+    border: 1px solid #ff4400;
+    position: relative;
+    left: -1px;
+    top: -1px;
+
+}
+.trigger-item .cover{
+    -index: 999;
+    display: block;
+    background: rgba(255,255,255,0.8);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#ccffffff,endColorstr=#ccffffff);
+    zoom: 1;
+    width: 39px;
+    height: 39px;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+a.trigger-item:hover .cover  {
+    display: none;
+}
+.trigger-item.selected  .cover{
+    display: none;
+}
+

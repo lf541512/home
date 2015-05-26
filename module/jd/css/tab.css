@@ -1,0 +1,464 @@
+h2, h3 {
+    font-family: "microsoft yahei";
+    font-weight: normal;
+}
+
+body {
+    font: 12px/150% Arial, Verdana, "\5b8b\4f53";
+    color: #666;
+    background: #fff;
+}
+
+.floor-current h2 i {
+    -webkit-animation-name: scaleDisc;
+    -moz-animation-name: scaleDisc;
+    animation-name: scaleDisc;
+    -webkit-animation-duration: 1s;
+    -moz-animation-duration: 1s;
+    animation-duration: 1s;
+}
+
+.floor-current h2 i {
+    background: url(http://misc.360buyimg.com/product/home/1.0.0/widget/floor/i/sprite_floor.png?__sprite) no-repeat 0 0;
+    background-position: 0 0;
+}
+
+.floor h2 i {
+    position: absolute;
+    top: 2px;
+    left: 0;
+    width: 21px;
+    height: 25px;
+    padding-right: 10px;
+    background: url(http://misc.360buyimg.com/product/home/1.0.0/widget/floor/i/floor1new.png) no-repeat 0 0;
+    font-size: 13px;
+    color: #fff;
+    text-align: center;
+    overflow: hidden;
+}
+
+em, i, u {
+    font-style: normal;
+}
+
+a {
+    color: #666;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #C81623;
+}
+
+body, html, ul, h1, h2, h3, h4, h5 {
+    margin: 0;
+    padding: 0;
+}
+
+li {
+    list-style: none;
+}
+
+#lazy-clothes {
+    height: 737px;
+}
+
+.root61 .w {
+    width: 1210px;
+}
+
+.floor .mt {
+    border-bottom: 1px solid #c81623;
+    overflow: visible;
+    _zoom: 1;
+    position: relative;
+}
+
+.floor h2 {
+    position: relative;
+    padding-left: 40px;
+    color: #333;
+}
+
+#guessyou h2, #special-buy h2, #special h2, #share h2, .floor h2 {
+    float: left;
+    line-height: 30px;
+    font-size: 20px;
+}
+
+.floor-current h2:before {
+    content: "";
+    position: absolute;
+    top: 2px;
+    left: 0;
+    width: 31px;
+    height: 25px;
+    background: url(http://misc.360buyimg.com/product/home/1.0.0/widget/floor/i/sprite_floor.png?__sprite) no-repeat 0 0;
+    background-position: 0 -35px;
+}
+
+.floor .mt .tab {
+    margin-top: 1px;
+}
+
+#guessyou .mt .extra, #guessyou .mt .tab, #special-buy .mt .extra, #special-buy .mt .tab, #special .mt .extra, #special .mt .tab, #share .mt .extra, #share .mt .tab, .floor .mt .extra, .floor .mt .tab {
+    float: right;
+    display: inline;
+}
+
+.floor .tab {
+    border: solid 1px #ededed;
+    border-bottom: 0 none;
+    height: 34px;
+    line-height: 34px;
+    z-index: 1;
+}
+
+.floor .tab-item {
+    float: left;
+    display: inline;
+    height: 34px;
+    position: relative;
+    z-index: 2;
+}
+
+.floor .tab-item a {
+    float: left;
+    height: 34px;
+    padding: 0 16px;
+    text-decoration: none;
+    line-height: 34px;
+    overflow: hidden;
+    background: #fff;
+    border-left: solid 1px #fff;
+    border-right: solid 1px #fff;
+    white-space: nowrap;
+}
+
+.floor .tab-item span {
+    position: absolute;
+    width: 1px;
+    background: #ccc;
+    overflow: hidden;
+    height: 14px;
+    top: 10px;
+    right: 0;
+}
+
+#guessyou .mt, #special-buy .mt, #special .mt, #share .mt, .floor .mt {
+    height: 36px;
+}
+
+.floor .tab-selected a {
+    position: absolute;
+    white-space: nowrap;
+    border-left: solid 1px #c81623;
+    border-right: solid 1px #c81623;
+    border-top: solid 3px #c81623;
+    top: -1px;
+    left: -1px;
+    height: 33px;
+    line-height: 30px;
+    color: #c81623;
+    text-indent: 1px;
+}
+
+.floor .tab-selected span {
+    display: none;
+}
+
+.floor .side {
+    float: left;
+    width: 330px;
+    overflow: hidden;
+    font-family: "microsoft yahei";
+}
+
+.floor .side-inner {
+    position: relative;
+    width: 330px;
+    background: #e5ebeb;
+    overflow: hidden;
+}
+
+#clothes .themes {
+    padding-left: 25px;
+    margin-top: -221px;
+}
+
+.floor .themes {
+    position: relative;
+    padding-left: 10px;
+    height: 92px;
+    margin-top: -237px;
+    overflow: hidden;
+    background: rgba(255, 255, 255, .5);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#88FFFFFF, endColorstr=#88FFFFFF);
+}
+
+#clothes .themes li {
+    width: 100px;
+}
+
+.floor .themes li {
+    float: left;
+    width: 98px;
+    height: 26px;
+    padding: 10px 0;
+}
+
+.floor .themes a {
+    float: left;
+}
+
+#clothes .themes .fore1 .icon {
+    background: url(http://misc.360buyimg.com/product/home/1.0.0/widget/clothes/i/clothesicon.png) 0 0 no-repeat;
+    _background: url(http://misc.360buyimg.com/product/home/1.0.0/widget/clothes/i/clothesicon8.png) 0 0 no-repeat;
+}
+
+.floor .themes .icon {
+    width: 26px;
+    margin-right: 5px;
+}
+
+.floor .themes i, .floor .themes span {
+    float: left;
+    height: 26px;
+    overflow: hidden;
+    line-height: 26px;
+}
+
+.floor .themes span {
+    font-size: 14px;
+    margin-right: 5px;
+}
+
+#clothes .themes .fore2 .icon {
+    background: url(http://misc.360buyimg.com/product/home/1.0.0/widget/clothes/i/clothesicon.png) 0 -26px no-repeat;
+    _background: url(http://misc.360buyimg.com/product/home/1.0.0/widget/clothes/i/clothesicon8.png) 0 -26px no-repeat;
+}
+
+#clothes .themes .fore3 .icon {
+    background: url(http://misc.360buyimg.com/product/home/1.0.0/widget/clothes/i/clothesicon.png) 0 -52px no-repeat;
+    _background: url(http://misc.360buyimg.com/product/home/1.0.0/widget/clothes/i/clothesicon8.png) 0 -52px no-repeat;
+}
+
+#clothes .themes .fore4 .icon {
+    background: url(http://misc.360buyimg.com/product/home/1.0.0/widget/clothes/i/clothesicon.png) 0 -78px no-repeat;
+    _background: url(http://misc.360buyimg.com/product/home/1.0.0/widget/clothes/i/clothesicon8.png) 0 -78px no-repeat;
+}
+
+#clothes .themes .fore5 .icon {
+    background: url(http://misc.360buyimg.com/product/home/1.0.0/widget/clothes/i/clothesicon.png) 0 -104px no-repeat;
+    _background: url(http://misc.360buyimg.com/product/home/1.0.0/widget/clothes/i/clothesicon8.png) 0 -104px no-repeat;
+}
+
+#clothes .themes .fore6 .icon {
+    background: url(http://misc.360buyimg.com/product/home/1.0.0/widget/clothes/i/clothesicon.png) 0 -130px no-repeat;
+    _background: url(http://misc.360buyimg.com/product/home/1.0.0/widget/clothes/i/clothesicon8.png) 0 -130px no-repeat;
+}
+
+#clothes .words {
+    height: 128px;
+    border-bottom: 1px solid #ededed;
+}
+
+.floor .words {
+    position: relative;
+    height: 76px;
+    background: rgba(255, 255, 255, .7);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#BBFFFFFF, endColorstr=#BBFFFFFF);
+    font-family: \5b8b\4f53;
+}
+
+#clothes .words li {
+    height: 96px;
+    padding-top: 16px;
+}
+
+.floor .words li {
+    float: left;
+    width: 135px;
+    height: 48px;
+    padding: 7px 0 0 25px;
+    overflow: hidden;
+}
+
+.style-red {
+    color: #c81623;
+}
+
+#clothes .words li {
+    height: 96px;
+    padding-top: 16px;
+}
+
+.floor .words a {
+    float: left;
+    margin-right: 10px;
+    line-height: 24px;
+    white-space: nowrap;
+}
+
+#clothes .side-extra {
+    width: 328px;
+    height: 158px;
+    border: 1px solid #ededed;
+    border-left: 1px solid #f7f5ee;
+    border-top: 0;
+    overflow: hidden;
+}
+
+.root61 .floor .main {
+    width: 880px;
+}
+
+.floor .main {
+    position: relative;
+    float: left;
+    width: 660px;
+    height: 474px;
+    overflow: hidden;
+}
+
+.floor .main-body {
+    float: left;
+    width: 660px;
+}
+
+.root61 .floor .main-extra {
+    display: block;
+}
+
+.floor .main-extra {
+    display: none;
+    float: left;
+    width: 220px;
+}
+
+#clothes .main-body li.fore1 {
+    width: 440px;
+}
+
+.floor .main-inner a {
+    display: block;
+    border-right: 1px solid #EDEDED;
+    border-bottom: 1px solid #EDEDED;
+    overflow: hidden;
+}
+
+.floor img {
+    vertical-align: top;
+}
+
+#clothes .main-body li.fore3, #clothes .main-body li.fore4, #clothes .main-body li.fore5, #clothes .main-body li.fore6 {
+    float: right;
+}
+
+#clothes .main-body li.fore3 {
+    margin-top: -158px;
+}
+#clothes .main-body li {
+    float: left;
+    height: 158px;
+}
+.floor .main-inner li {
+    width: 220px;
+    overflow: hidden;
+    font-size: 0;
+}
+#clothes .main-body li.fore2 {
+    width: 440px;
+    height: 159px;
+    padding-top: 316px;
+}
+.floor img {
+    vertical-align: top;
+}
+#clothes .main-body li.fore2 a {
+    height: 158px;
+}
+#clothes .main-extra li.fore3 {
+    height: 317px;
+}
+#clothes .main {
+    height: 633px;
+}
+.root61 .brands {
+    padding-left: 0;
+}
+.brands {
+    background: #f7f7f7;
+    padding: 13px 0 13px 11px;
+    margin-top: 10px;
+}
+.brands ul {
+    height: 40px;
+    overflow: hidden;
+}
+.brands li.fore1 {
+    border-left: none;
+}
+.brands li {
+    float: left;
+    width: 120px;
+    height: 40px;
+    border-left: 1px dotted #ccc;
+    text-align: center;
+}
+.m, .mb, .mc, .mt, .p-detail, .p-img, .p-market, .p-name, .p-price, .sm, .smb, .smc, .smt {
+    overflow: hidden;
+}
+.root61 .floor .p-list {
+    width: 890px;
+}
+.floor .p-list {
+    width: 670px;
+    height: 474px;
+    overflow: hidden;
+}
+#clothes .p-list li {
+    width: 185px;
+}
+.root61 .floor .p-list li {
+    width: 165px;
+}
+.floor .p-list li {
+    float: left;
+    width: 160px;
+    height: 230px;
+    padding: 6px 17px 0;
+    border-bottom: 1px solid #ededed;
+    border-right: 1px solid #ededed;
+    overflow: hidden;
+}
+.floor .p-list .p-img {
+    height: 140px;
+    margin-bottom: 4px;
+    text-align: center;
+    padding-top: 15px;
+}
+.floor .p-list .p-name {
+    height: 3em;
+    margin-bottom: 3px;
+}
+.floor .p-list .p-price {
+    font-size: 15px;
+    font-family: Verdana;
+    color: #E4393C;
+}
+.root61 .floor .img-list {
+    width: 890px;
+}
+.floor .img-list {
+    width: 670px;
+    height: 159px;
+    overflow: hidden;
+}
+.floor .img-list li {
+    float: left;
+    width: 219px;
+    height: 158px;
+    border-bottom: 1px solid #ededed;
+    border-right: 1px solid #ededed;
+}

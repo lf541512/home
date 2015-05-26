@@ -1,0 +1,184 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+    <title>Document</title>
+    <style>
+        body{
+            margin: 0;
+            padding: 0;
+            background: url(images/bg.png) no-repeat center 0;
+            font-size: 12px;
+        }
+        #slider{
+            height: 400px;
+            width: 1002px;
+            margin: 0 auto;
+            position: relative;
+        }
+        #slider a{
+            text-decoration: none;
+            color: #CCC;
+        }
+        #slider a.slider_item {
+
+            position: absolute;
+            top: 0;
+            left: 0;
+
+        }
+      .slider_item,.slider_item img{
+          height: 100%;
+          width: 100%;
+          border: none;
+      }
+        #slider .slider_nav{
+            position: absolute;
+            top: 100%;
+            left: 0;
+            background: url(images/nav_bg.png) repeat-x;
+            width: 940px;
+            margin: 0 31px;
+            overflow: hidden;
+        }
+        #slider ul{
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            width: 2540px;
+        }
+        .slider_nav ul li{
+            float: left;
+            width: 179px;
+            line-height: 36px;
+            padding-left: 30px;
+            border-right: 1px dotted #A8A8A8;
+
+        }
+        .slider_nav ul li a{
+            width: 170px;
+            overflow: hidden;
+            display: block;
+
+        }
+        a span{
+           white-space: nowrap;
+        }
+        .slider_dv{
+            background: url(images/icons.png) no-repeat 4px 12px;
+        }
+        .slider_pc{
+            background: url(images/icons.png) no-repeat 4px -18px;
+        }
+        .slider_tv{
+            background: url(images/icons.png) no-repeat 4px -48px;
+        }
+        .slider_camera{
+             background: url(images/icons.png) no-repeat 4px -78px;
+         }
+        .slider_pad{
+            background: url(images/icons.png) no-repeat 4px -108px;
+        }
+        .slider_prev,.slider_next{
+            position: absolute;
+            top: 5px;
+            width: 19px;
+            height: 33px;
+
+            text-indent: -9999em  ;
+        }
+        .slider_prev{
+            left: 10px;
+            background: url("images/btn_bg.png") no-repeat -19px -4px;
+        }
+        .slider_next{
+            right: 10px;
+            background: url("images/btn_bg.png") no-repeat 0 -4px;
+        }
+        a.slider_prev:hover{
+            left: 10px;
+            background: url("images/btn_bg.png") no-repeat -19px -37px;
+        }
+        a.slider_next:hover{
+            right: 10px;
+            background: url("images/btn_bg.png") no-repeat 0 -37px;
+        }
+        .slider_nav_main {
+            height: 100%;
+            width: 838px;
+            margin: 0 auto;
+            overflow: hidden;
+        }
+
+    </style>
+
+</head>
+<body>
+<div id="slider">
+<a href="#" title="摄录望远镜DEV-3新品预售 分享探索的惊喜，立即体验！" class="slider_item" style="z-index: 12;"><img alt="" src="images/dv1.jpg" style="opacity: 1;"></a>
+    <a href="#" title="个人电脑 VAIO Z系列 耀世而创 限量型号精彩促销" class="slider_item" style="z-index: 12;"><img alt="" src="images/pc1.jpg" style="opacity: 1;"></a>
+    <a href="#" title="液晶电视机 HX920系列" class="slider_item" style="z-index: 11;"><img alt="" src="images/tv1.jpg"></a>
+    <a href="#" title="数码单电相机SLT-A77 全新登场" class="slider_item" style="z-index: 14;"><img alt="" src="images/camera1.jpg" style="opacity: 1;"></a>
+    <a href="#" title="平板电脑 S系列 开启想象！" class="slider_item" style="z-index: 12;"><img alt="" src="images/pad1.jpg" style="opacity: 1;"></a>
+    <a href="#" title="数码微单相机NEX-5N 我的照片就是我" class="slider_item" style="z-index: 12;"><img alt="" src="images/camera2.jpg" style="opacity: 1;"></a>
+    <a href="#" title="摄录望远镜DEV-3新品预售 分享探索的惊喜，立即体验！" class="slider_item" style="z-index: 12;"><img alt="" src="images/dv1.jpg" style="opacity: 1;"></a>
+    <a href="#" title="个人电脑 VAIO Z系列 耀世而创 限量型号精彩促销" class="slider_item" style="z-index: 12;"><img alt="" src="images/pc1.jpg" style="opacity: 1;"></a>
+    <a href="#" title="液晶电视机 HX920系列" class="slider_item" style="z-index: 12;"><img alt="" src="images/tv1.jpg" style="opacity: 1;"></a>
+    <a href="#" title="数码单电相机SLT-A77 全新登场" class="slider_item" style="z-index: 12;"><img alt="" src="images/camera1.jpg" style="opacity: 1;"></a>
+    <a href="#" title="平板电脑 S系列 开启想象！" class="slider_item" style="z-index: 12;"><img alt="" src="images/pad1.jpg" style="opacity: 1;"></a>
+    <a href="#" title="数码微单相机NEX-5N 我的照片就是我" class="slider_item" style="z-index: 12;"><img alt="" src="images/camera2.jpg" style="opacity: 1;"></a>
+    <div class="slider_nav" style="z-index: 17;">
+        <div class="slider_nav_main">
+            <ul style="margin-left: 0px;">
+                <li class="slider_dv"><a title="摄录望远镜DEV-3新品预售 分享探索的惊喜，立即体验！" href="#" class="hover"><span style="margin-left: 0px;">摄录望远镜DEV-3新品预售 分享探索的惊喜，立即体验！</span></a></li>
+                <li class="slider_pc"><a title="个人电脑 VAIO Z系列 耀世而创 限量型号精彩促销" href="#" class=""><span style="margin-left: 0px;">个人电脑 VAIO Z系列 耀世而创 限量型号精彩促销</span></a></li>
+                <li class="slider_tv"><a title="液晶电视机 HX920系列" href="#" class=""><span style="margin-left: 0px;">液晶电视机 HX920系列</span></a></li>
+                <li class="slider_camera"><a title="数码单电相机SLT-A77 全新登场" href="#" class=""><span style="margin-left: 0px;">数码单电相机SLT-A77 全新登场</span></a></li>
+                <li class="slider_pad"><a title="平板电脑 S系列 开启想象！" href="#" class=""><span style="margin-left: 0px;">平板电脑 S系列 开启想象！</span></a></li>
+                <li class="slider_camera"><a title="数码微单相机NEX-5N 我的照片就是我" href="#" class=""><span style="margin-left: 0px;">数码微单相机NEX-5N 我的照片就是我</span></a></li>
+                <li class="slider_dv"><a title="摄录望远镜DEV-3新品预售 分享探索的惊喜，立即体验！" href="#" class=""><span style="margin-left: 0px;">摄录望远镜DEV-3新品预售 分享探索的惊喜，立即体验！</span></a></li>
+                <li class="slider_pc"><a title="个人电脑 VAIO Z系列 耀世而创 限量型号精彩促销" href="#" class=""><span style="margin-left: 0px;">个人电脑 VAIO Z系列 耀世而创 限量型号精彩促销</span></a></li>
+                <li class="slider_tv"><a title="液晶电视机 HX920系列" href="#" class=""><span style="margin-left: 0px;">液晶电视机 HX920系列</span></a></li>
+                <li class="slider_camera"><a title="数码单电相机SLT-A77 全新登场" href="#" class=""><span style="margin-left: 0px;">数码单电相机SLT-A77 全新登场</span></a></li>
+                <li class="slider_pad"><a title="平板电脑 S系列 开启想象！" href="#" class=""><span style="margin-left: 0px;">平板电脑 S系列 开启想象！</span></a></li>
+                <li class="slider_camera"><a title="数码微单相机NEX-5N 我的照片就是我" href="#" class=""><span style="margin-left: 0px;">数码微单相机NEX-5N 我的照片就是我</span></a></li>
+            </ul>
+        </div>
+        <a class="slider_prev" href="#">上一组</a><a class="slider_next" href="#">下一组</a>
+    </div>
+
+</div>
+<script src="../jquery-1.11.1.js"></script>
+<script type="text/javascript">
+    prevInd=0;
+    timer=0;
+    var showEms=$('#slider>a')
+    function play(ind) {
+        if(ind==prevInd){return}
+        showEms.eq(prevInd).css("z-index",0).animate({opacity:0});
+        showEms.eq(ind).css('opacity', 0).css("z-index",100).animate({opacity:1});
+        marquee(ind);
+
+        prevInd=ind;
+    }
+     function marquee(ind){
+          var span=$('.slider_nav_main span').eq(ind) ;
+         var width=span.width();
+         var ml=0;
+         clearTimeout(timer);
+         $('.slider_nav_main span').eq(prevInd).css('marginLeft',0);
+         function move(){
+             ml-=10;
+
+             span.css('marginLeft',ml+'px') ;
+             if(ml<=(-width) ){
+                 ml=170;
+             }
+
+         }
+          timer=setInterval(move,200)
+     }
+</script>
+</body>
+</html>

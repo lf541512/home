@@ -1,0 +1,25 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+        "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>半透明层</title>
+    <style type="text/css">
+        #back{height: 500px;background-color: #58B1EA;position: relative;}
+        .filter{color:red;background-color: #333;opacity: 0.4;filter:alpha(Opacity=40);height: 300px;width: 500px;position: absolute;left: 100px;top:100px;z-index: 1}
+        .content{position: absolute;top:180px;left:270px; color: red;background-color: #eee;width: 100px;height: 100px;z-index: 1000;}
+    </style>
+</head>
+<body>
+<div id="back">back
+    <div class="filter">这是半透明层</div>
+    <div class="content">实际内容层</div>
+
+
+
+
+
+</div>
+<div class="filter">这是半透明层</div>
+</body>
+</html>

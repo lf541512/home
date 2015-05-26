@@ -1,0 +1,14 @@
+.fl{
+    float: left;
+}
+.fr{
+    float: right;
+}
+.clear, .clr {
+    display: block;
+    overflow: hidden;
+    clear: both;
+    height: 0;
+    line-height: 0;
+    font-size: 0;
+}

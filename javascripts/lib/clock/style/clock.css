@@ -1,0 +1,44 @@
+.clock{
+    height: 800px;
+    width: 800px;
+    position: relative;
+    margin: 50px auto;
+    background-color: #eee;
+}
+.clock div{
+    position: absolute;
+    -webkit-background-size: 1024px;
+    background-size: 1024px;
+    background-image: url("../images/clock.png");
+}
+.clock-panel{
+    height: 800px;
+    width: 800px;
+    background-position: -180px -35px;
+}
+.clock-hour{
+    height: 165px;
+    width: 40px;
+    background-position: -118px -555px;
+    top: 246px;
+    left: 383px;
+    transform-origin: 18px 148px;
+}
+.clock-mini{
+    height: 220px;
+    width: 30px;
+    background-position: -70px -498px;
+    top: 191px;
+    left: 383px;
+    transform-origin: 17px 204px;
+
+}
+.clock-second{
+    height: 328px;
+    width: 40px;
+    background-position: -21px -460px;
+    top: 150px;
+    left: 380px;
+    transform-origin: 19px 244px;
+    /*filter:progid:DXImageTransform.Microsoft.BasicImage(rotation=3);*/
+}

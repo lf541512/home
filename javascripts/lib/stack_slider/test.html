@@ -17,41 +17,70 @@
     <a href="#" title="b3"><img alt="" src="images/b3.jpg" /></a>
     <a href="#" title="b4"><img alt="" src="images/b4.jpg" /></a>
     <a href="#" title="b5"><img alt="" src="images/b5.jpg" /></a>
+    <a href="#" title="b3"><img alt="" src="images/b3.jpg" /></a>
+    <a href="#" title="b4"><img alt="" src="images/b4.jpg" /></a>
+    <a href="#" title="b5"><img alt="" src="images/b5.jpg" /></a>
 </div>
  <script type="text/javascript" src="../ds.js"></script>
 <script type="text/javascript">
-   var links= ds.$tagName('a');
 
-   var index=-1;
-   var len=links.length;
-   for(var i=0;i<len;i++){
-       ds.css(links[i],'width','30px');
-   }
-   ds.css(links[len-1],'width','470px');
-   function ai(){
 
-       var step=(500-30)/25;
-       for(var ti=0;ti<25;ti++){
-           (function() {
-               var width= Math.ceil(step*(ti+1));
-               setTimeout(function(){
-                   if(index==0)  {
-                       ds.css(links[len-1],'width',500-width+'px');
-                   }
-                   else{
-                       ds.css(links[index-1],'width',500-width+'px');
-                   }
-                   ds.css(links[index],'width',width+'px');
+    var Stack=function(ops){
+          for(var p in ops){
+              this.ops[p]=ops[p];
+          }
+        this[0] = typeof ops.shell === 'string' ? ds.$id(ops.shell) : ops.shell;
+        this.init();
+        this.run();
+    }
+    Stack.prototype={
+        ops:{
+            minWidth:30,
+            shell:document.body
+        },
+        init:function(){
+            var links= ds.$tagName('a'); this.links=links
+            var index=-1;  this.index=index;
+            var len=links.length; this.len=len;
+            this.maxWidth=ds.$id('stack_slider').offsetWidth;
+            var imgMax=this.maxWidth-this.ops.minWidth*(len-1)-2;
+            this.imgMax=imgMax;
+            for(var i=0;i<len;i++){
+                ds.css(links[i],'width',this.ops.minWidth+'px');
+            }
+            ds.css(links[len-1],'width', imgMax+'px');
+        },
+        run:function(){
+           var self=this;
+            function ai(){
+                 var timeOut=1000,interval=40;
+                var times= timeOut/interval;
+                var step=( self.imgMax-self.ops.minWidth)/times;
+                for(var ti=0;ti<times;ti++){
+                    (function(i) {
+                        var width= Math.ceil(step*(i+1));
+                        setTimeout(function(){
+                            if(self.index==0)  {
+                                ds.css(self.links[self.len-1],'width',self.imgMax-width+'px');
+                            }
+                            else{
+                                ds.css(self.links[self.index-1],'width',self.imgMax-width+'px');
+                            }
+                            ds.css(self.links[self.index],'width',self.ops.minWidth+width+'px');
 
-               },40*ti);
-           })()
+                        },interval*i);
+                    })(ti)
 
-       }
-       if(++index==len) {index=0}
+                }
+                if(++self.index==self.len) {self.index=0}
 
-   }
-   ai();
-   setInterval(ai,2000);
+            }
+            ai();
+            setInterval(ai,2000);
+        }
+    }
+    new Stack({shell:"stack_slider",minWidth:30})
+
 
 </script>
 </body>

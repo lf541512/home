@@ -1,0 +1,37 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+    <title>Document</title>
+    <style>
+        #cav{
+            width: 800px;
+            height: 800px;
+        }
+        /*#clock{display: none}*/
+    </style>
+</head>
+<body>
+  <canvas id="cav"></canvas>
+
+  <!--[if IE 8]><script src="excanvas.js"></script>    <![endif] -->
+  <script>
+      window.onload= function () {
+          var canvas=document.getElementById("cav");
+          var context=canvas.getContext('2d') ;
+          var imgObj=new Image();
+
+          imgObj.onload = function() {
+              context.drawImage(imgObj,0,0)
+          };
+          imgObj.src='images/clock.png' ;
+          imgObj.src='http://www.html5canvastutorials.com/demos/assets/darth-vader.jpg'
+
+
+      }
+
+
+  </script>
+</body>
+</html>
