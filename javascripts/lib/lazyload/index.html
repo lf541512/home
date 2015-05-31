@@ -1,0 +1,174 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+    <title>grid</title>
+    <style>
+        table{
+            /*margin: 0 auto;*/
+            border: 1px solid #45D0DA;
+        }
+        .first{
+            background-color: #A8A8A8;
+            color: #A31515;
+            width: 80px;
+        }
+        .wraper{
+            width: 800px;
+            margin: 0 auto;
+            background-color: #ffdddd;
+        }
+    </style>
+    <script type="text/javascript" src="../jquery-1.11.1.js"></script>
+    <script>
+        (function ($) {
+            var tabLazyLoad=window.TabLazyLoad=function(ops){
+                this.initOptions();
+                $.extend(this.ops,ops);
+                this.init();
+            }
+            tabLazyLoad.prototype={
+                constructor:tabLazyLoad,
+                initOptions:function(){
+                    this.ops={
+                        tabarr:[],
+                        $tab:$("#tb"),
+                        render:undefined
+                    }
+                },
+                init: function () {
+                    this.$tab=this.ops.$tab;
+                    this.tabarr=this.ops.tabarr;
+                    if(!this.ops.render) {
+                        this.render=function(item){
+                            var str='<tr><td>'+item[0]+"</td>";
+                            for(var i=1;i<item.length;i++){
+                                str=str+"<td>" +item[i]+'</td>';
+                            }
+                             str=str+"</tr>" ;
+                             return str;
+                        }
+                    } else{
+                        this.render= this.ops.render;
+                    }
+                      var self=this;
+                    this.displayIndex=0 ;
+                    var $target=$("#tb");
+                    var $tbody=$($target[0].tBodies[0]);
+                    if ($tbody.length==0) {
+                        $("#tb")[0].appendChild(document.createElement('tbody'));
+                        $tbody=$($target[0].tBodies[0]);
+                    }
+                    $(window).on('scroll', diplaytab) ;
+                    diplaytab();
+                    function diplaytab(){
+                        var fold = (window.innerHeight ? window.innerHeight : $(window).height()) + $(window).scrollTop();
+                        while(fold> $target.offset().top+$target.height() ) {
+                            if(self.tabarr.length-1<=self.displayIndex){
+                                break;
+                            }
+                            var  item=tabarr[self.displayIndex++];
+                         var str= self.render(item);
+                            $tbody.append(str);
+                            fold = (window.innerHeight ? window.innerHeight : $(window).height()) + $(window).scrollTop();
+                        }
+                    }
+
+                }
+            }
+        })(jQuery);
+
+        var tabarr= [["EST-1","FI-SW-01","36.50","Large"],
+            ["EST-10","K9-DL-01","18.50","Spotted Adult Female"],
+            ["EST-11","RP-SN-01","28.50","Venomless "],
+            ["EST-12","RP-SN-01","26.50","Rattleless"],
+            ["EST-13","RP-LI-02","35.50","Green Adult"],
+            ["EST-1","FI-SW-01","36.50","Large"],
+            ["EST-10","K9-DL-01","18.50","Spotted Adult Female"],
+            ["EST-11","RP-SN-01","28.50","Venomless "],
+            ["EST-12","RP-SN-01","26.50","Rattleless"],
+            ["EST-13","RP-LI-02","35.50","Green Adult"],
+            ["EST-1","FI-SW-01","36.50","Large"],
+            ["EST-10","K9-DL-01","18.50","Spotted Adult Female"],
+            ["EST-11","RP-SN-01","28.50","Venomless "],
+            ["EST-12","RP-SN-01","26.50","Rattleless"],
+            ["EST-13","RP-LI-02","35.50","Green Adult"],
+            ["EST-1","FI-SW-01","36.50","Large"],
+            ["EST-10","K9-DL-01","18.50","Spotted Adult Female"],
+            ["EST-11","RP-SN-01","28.50","Venomless "],
+            ["EST-12","RP-SN-01","26.50","Rattleless"],
+            ["EST-13","RP-LI-02","35.50","Green Adult"],
+            ["EST-1","FI-SW-01","36.50","Large"],
+            ["EST-10","K9-DL-01","18.50","Spotted Adult Female"],
+            ["EST-11","RP-SN-01","28.50","Venomless "],
+            ["EST-12","RP-SN-01","26.50","Rattleless"],
+            ["EST-13","RP-LI-02","35.50","Green Adult"],
+            ["EST-1","FI-SW-01","36.50","Large"],
+            ["EST-10","K9-DL-01","18.50","Spotted Adult Female"],
+            ["EST-11","RP-SN-01","28.50","Venomless "],
+            ["EST-12","RP-SN-01","26.50","Rattleless"],
+            ["EST-13","RP-LI-02","35.50","Green Adult"],
+            ["EST-1","FI-SW-01","36.50","Large"],
+            ["EST-10","K9-DL-01","18.50","Spotted Adult Female"],
+            ["EST-11","RP-SN-01","28.50","Venomless "],
+            ["EST-12","RP-SN-01","26.50","Rattleless"],
+            ["EST-13","RP-LI-02","35.50","Green Adult"],
+            ["EST-1","FI-SW-01","36.50","Large"],
+            ["EST-10","K9-DL-01","18.50","Spotted Adult Female"],
+            ["EST-11","RP-SN-01","28.50","Venomless "],
+            ["EST-12","RP-SN-01","26.50","Rattleless"],
+            ["EST-13","RP-LI-02","35.50","Green Adult"]]
+
+
+        $(
+                function(){
+                    var renderComm=function(item){
+                        var str='<tr><td class="first">'+item[0]+"</td>";
+                        for(var i=1;i<item.length;i++){
+                            str=str+"<td>" +item[i]+'</td>';
+                        }
+                        str=str+"<td><button>delete</button></td>></tr>" ;
+                        return str;
+                    }
+                      var tab=new window.TabLazyLoad({tabarr:tabarr,render:renderComm});
+                    $("#tb").on('click',"button", function (e) {
+                        var el= e.target;
+                        while(el.tagName.toLowerCase()!='tr') {
+                              el=el.parentNode;
+                        }
+                        el.parentNode.removeChild(el);
+                    })
+                }
+
+        )
+
+
+    </script>
+</head>
+<body>
+ <div class="wraper">
+
+      <div style="float: right;;margin-left: 50%;">
+     <table id="tb" style="margin-left: -50%">
+         <caption>Basic DataGrid</caption>
+         <thead>
+             <th>Item ID</th>
+             <th>Product</th>
+             <th>List Price</th>
+             <th>Attribute</th>
+             <th>delete</th>
+         </thead>
+         <!--<tbody id="content">-->
+         <!--<tr>-->
+             <!--<td>EST-13</td>-->
+             <!--<td>K9-DL-01</td>-->
+             <!--<td>28</td>-->
+             <!--<td>Rattleless</td>-->
+         <!--</tr>-->
+         <!--</tbody>-->
+     </table>
+      </div>
+ </div>
+</body>
+</html>

@@ -1,3 +1,22 @@
+/**
+ * Created by lf
+ * 从 inputFileName文件中读取地址，下载文件放到outputDirectory中
+ * inputFileName文件的每行是一个地址
+ */
+
+
+var arguments = process.argv.splice(2);
+var inputFile=arguments[0];
+var outputDirectory= arguments[1];
+if(!inputFile||!outputDirectory){
+    console.log("usage: node download.js inputFileName outputDirectory");
+    return;
+}
+outputDirectory=outputDirectory.replace(/\\/g,'/');
+if(outputDirectory[outputDirectory.length-1]!="/")
+{
+    outputDirectory=outputDirectory+"/";
+}
 var http = require("http");
 var fs = require("fs");
 
@@ -48,7 +67,7 @@ function func(url) {
         res.on("end", function(){
             console.log(name);
             console.log("downloads:"+(++downs)+"   reads:"+reads);
-            fs.writeFile("img/"+name, imgData, "binary", function(err){
+            fs.writeFile(outputDirectory+name, imgData, "binary", function(err){
                 if(err){
                     console.log("down fail" +err);
                 }
@@ -58,5 +77,5 @@ function func(url) {
     });
 }
 
-var input = fs.createReadStream('test.txt');
+var input = fs.createReadStream(inputFile);
 readLines(input, func);
