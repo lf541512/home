@@ -15,11 +15,14 @@
 </style>
 <body>
 <div>
-    <img id="img" src="normal.png" alt="">
+    <img id="img" src="normal.png" alt="" >
     <button id="crop">裁切透明区域</button>
     <img id="dst" src="" alt="">
 </div>
 <script>
+    document.getElementById("img").ondragstart=function(e){
+        e.preventDefault();
+    }
     function RemoveTransparent(image) {
         //裁切出图像的非透明区域
         //收缩图片的4条边，直到碰到非透明像素，裁切出非透明部分
@@ -108,7 +111,7 @@
             var end = width * 4 * line + width * 4;
             var data = imgData.data;
             for (var i = start; i < end; i += 4) {
-                var alpha = data[i];
+                var alpha = data[i+3];
                 if (alpha != 0) {
                     return true;
                 }
@@ -121,7 +124,7 @@
             var data = imgData.data;
             for (i = startRow; i < endRow; i++) {
                 var rowStart = width * 4 * i;
-                var alpha = data[rowStart + col * 4];
+                var alpha = data[rowStart + col * 4+3];
                 if (alpha != 0) {
                     return true;
                 }
